@@ -1,0 +1,43 @@
+#menu {
+    margin-top: 10px;
+    position: fixed;
+    z-index: 2;
+    opacity: 0.9;
+}
+#menu>ul>li {
+    float: left;
+}
+#menu>ul>li button {
+    width: 130px;
+    display: block;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px
+}
+#menu>ul>li>ul {
+    display: none
+}
+#menu>ul>li>ul>li {
+    position: relative
+}
+#menu>ul>li>ul>li>button {
+    
+}
+#menu>ul>li>ul>li>ul {
+    position: absolute;
+    left: 100px;
+    top: 0;
+    display: none
+}
+#menu>ul>li>ul>li>ul button {
+    
+}
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
