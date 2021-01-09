@@ -1,10 +1,10 @@
 <script type="text/javascript" src="./js/oposiciones.js"></script>
 <div class="row">
     <div class="col-sm-2  align-self-center">
-        <button type="button" id="atras" class="btn btn-secondary "><img src="./img/arrow_back_ios_new-black-18dp.svg" alt="atras"></button>
+        <button type="button" id="atras" class="btn btn-secondary "><img src="./img/arrow_back_ios_new-black-18dp.svg" alt="atras" /></button>
     </div>
     <div class="col-sm-10 align-self-center">
-        <p class="h1">Calculador de puntos</pack>
+        <p class="h1">Calculador de puntos</p>
     </div>
 </div>
 <div style="clear: both"></div>
