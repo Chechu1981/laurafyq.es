@@ -1,13 +1,19 @@
 <?php
-header('Content-Type: text/html; charset=ISO-8859-1');
-$tipo = $_FILES['archivo']['type'];
-$tamanio = $_FILES['archivo']['size'];
-$archivotmp = utf8_decode($_FILES['archivo']['tmp_name']);
+include_once 'file.php';
+$fichero = new file(
+    utf8_decode($_FILES['archivo']['name']),
+    utf8_decode($_FILES['archivo']['tmp_name']),
+    $_FILES['archivo']['size'],
+    $_FILES['archivo']['type'],
+);
+$tipo = $fichero->getType();
+$tamanio = $fichero->getSize();
+$archivotmp = utf8_decode($fichero->getRute());
 $target_dir = "../uploads/";
-$target_file = $target_dir . basename(utf8_decode($_FILES['archivo']['name']));
-echo $target_file;
+$target_file = $target_dir . $fichero->getName();
 $respuesta = new stdClass();
 $respuesta->mensaje = "";
+echo $archivotmp . " / " . utf8_encode($target_file);
 if (move_uploaded_file($archivotmp, $target_file)) {
     $respuesta->estado = true;
 } else {

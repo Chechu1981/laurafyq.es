@@ -1,10 +1,31 @@
+function cleanFile(fileName){
+  var cadenaTilde ="áéíóúüñÁÉÍÓÚÜÑ¿?çÇ";
+  var cadenaIso = "aeiouunAEIOUUN__cc";
+  let str = "";
+  let cambio = false;
+  for(i = 0;i<fileName.length;i++){
+    cambio = false;
+    for(h = 0;h<cadenaIso.length;h++){
+      if(cadenaTilde[h] == fileName[i]){
+        str += cadenaIso[h];
+        cambio = true;;
+      }
+    }
+    if(!cambio){
+      str += fileName[i];
+    }
+  }
+  return str;
+}
+
+
 $(document).ready(function () {
     var y = document.getElementById("snackbarCargando");
     $('#cargarMaterial').load('./backend/tablaMaterial.php');
     $('#enviar').click(function (e) {
         var archivo = document.getElementById('archivo');
-        var size = archivo.files[0].size;
-        var nombref = archivo.files[0].name;
+        var size = cleanFile(archivo.files[0].size);
+        var nombref = cleanFile(archivo.files[0].name);
         var type = archivo.files[0].type;
         var formulario = $('#fichero').serializeArray();
         formulario.push({name: 'nombreFichero', value: nombref});

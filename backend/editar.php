@@ -1,4 +1,6 @@
 
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/propias.css" />
         <?php
         include_once '../conexion/bbdd.php';
         $nombre = "";
@@ -53,7 +55,7 @@
                             echo 'selected="selected"';
                         }
                         ?> value="<?php echo $fila[2] . substr($fila[1], 0, 3) ?>"><?php echo $fila[2] . 'º ' . $fila[1] ?></option>
-                        <?php } ?>
+                        <?php }  ?>
                 </select> <p></p>
 
                 <p></p>

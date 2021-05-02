@@ -1,5 +1,5 @@
 <script src="./js/material.js" type="text/javascript"  ></script>
-<p></p<><form name="fichero" enctype="multipart/form-data" method="post"  id="fichero" onKeyPress="if (event.keyCode === 13 && node.type !== 'TEXTAREA')event.returnValue = false;" >
+<p></p<><form name="fichero" enctype="multipart/form-data" method="post" id="fichero" onKeyPress="if (event.keyCode === 13 && node.type !== 'TEXTAREA')event.returnValue = false;" >
     <span >TÍTULO</span><br/>
     <input type="text" name="nombre" id="nombre" /><p></p>
     <span  >DESCRIPCIÓN</span><br/>
@@ -24,10 +24,11 @@
     </select> <p></p>
     <input type="file" id="archivo" multiple="true" name="archivo" data-browse-on-zone-click="true" /> 
     <p></p>
-<button id="enviar" type="button" >Publicar</button>
+    <button id="enviar" type="button" >Publicar</button>
 </form>
 
 <div id="mensaje"></div>
+
 <iframe style='display:none;border: none' id="edicionModal" width="850px" height="550px"></iframe>
 <p></p>
 <div id="cargarMaterial"></div>

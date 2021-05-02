@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#inicio').click(function (e) {
+    $(inicio).click(function (e) {
         var sessionId = $('#sessionId').val();
         window.location.assign("", {id: sessionId});
     });

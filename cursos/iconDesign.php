@@ -63,7 +63,7 @@ class IconDesign{
     }
 
     public function getRute(){
-        $rute = '../uploads/'.utf8_encode($this->rute);
+        $rute = './uploads/'.utf8_encode($this->rute);
         return $rute;
     }
 

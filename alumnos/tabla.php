@@ -11,8 +11,8 @@
                 <th>IDIOMA</th>
                 <th>TUTOR</th>
                 
-                <th><img src="./vendor/fontawesome-free/svgs/regular/calendar-check.svg" width="20px" style="cursor: pointer" /></th>   
-                <th><img src="./vendor/fontawesome-free/svgs/regular/edit.svg" width="20px" style="cursor: pointer" /></th>
+                <th><img src="./img/calendar-check.svg" width="20px" style="cursor: pointer" /></th>   
+                <th><img src="./img/edit.svg" width="20px" style="cursor: pointer" /></th>
             </tr>
             <?php
             include_once '../conexion/bbdd.php';

@@ -2,12 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="es" lang="es">
 
 <head id="recusrsos">
+<meta name="google-site-verification" content="hmk7KlXlKXag-8IbDcsNyVADBHCVDFWw7_b1dyEesUg" />
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <meta name="Description" content="Contenido didáctico de física y química de secundaria" />
     <title>Laura Royuela Romero</title>
     <link rel="icon" type="image/png" href="img/favicon-32x32.png" />

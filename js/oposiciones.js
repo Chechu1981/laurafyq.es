@@ -11,6 +11,9 @@ $('#iii').click(function (e) {
 $('#cam').click(function (e) {
     $('#tablaReg').load('./oposiciones/anexoIV.php', {meritos: "noBarra"});
 });
+$('#bal').click(function (e) {
+    $('#tablaReg').load('./oposiciones/bolas.php', {meritos: "noBarra"});
+});
 $('#oposicionesAtras').click(function (e) {
     $('#tablaReg').load('./oposiciones/oposiciones.php', {meritos: "noBarra"});
 });

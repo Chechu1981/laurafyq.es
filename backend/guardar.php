@@ -12,7 +12,7 @@ if (isset($_POST["nombre"]) && $_POST["nombre"] != "") {
     $tamano = utf8_decode($_POST["tamano"]);
     $respuesta = "";
     $consulta = "INSERT INTO material (nombre, descripcion, tipo, ruta, extension,curso,tamano)VALUES('$nombre','$descripcion','$tipo','$archivo','$extension[1]','$curso','$tamano')";
-    echo "INSERT INTO material (nombre, descripcion, tipo, ruta, extension,curso,tamano)VALUES('$nombre','$descripcion','$tipo','$archivo','$extension[1]','$curso','$tamano')";
+    //echo "INSERT INTO material (nombre, descripcion, tipo, ruta, extension,curso,tamano)VALUES('$nombre','$descripcion','$tipo','$archivo','$extension[1]','$curso','$tamano')";
     if ($conn->query($consulta)) {
         $respuesta->mensaje = "Se guardo correctamente";
     } else {
