@@ -94,3 +94,22 @@ function tema(curso, tema) {
     $('#tablaReg').load('./cursos/tabla.php', {curso: titulo, cursoid: curso, tema: tema});
 
 }
+
+class Sac {
+    nbll;
+    Sac1 = [];
+    constructor(num) {
+        this.nbll = num;
+        for (let i = 0; i < num; i++)
+            this.Sac1[i] = i + 1;
+    }
+        outBall() {
+            let rnd = Math.floor(Math.random() * this.nbll);
+            while (this.Sac1[rnd] == null) {
+                rnd = Math.floor(Math.random() * this.nbll);
+            }
+            let bll = this.Sac1[rnd];
+            this.Sac1[rnd] = null;
+            return bll;
+        }
+    }

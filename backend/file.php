@@ -10,13 +10,15 @@ class file {
     private $rute;
     private $size;
     private $type;
+    private $rename;
     
-    function __construct($name,$rute,$size,$type) {
+    function __construct($name,$rute,$size,$type,$rename) {
         
         $this->name = $name;
         $this->rute = $rute;
         $this->size = $size;
         $this->type = $type;
+        $this->rename = $rename;
     }
     
     public function getName() {
@@ -32,7 +34,8 @@ class file {
     }
 
     public function getType() {
-        return $this->type;
+        $ext = explode("/",$this->type);
+        return $ext[1];
     }
 
     public function setName($name): void {
@@ -49,6 +52,10 @@ class file {
 
     public function setType($type): void {
         $this->type = $type;
+    }
+
+    public function getRename(){
+        return $this->rename;
     }
 
 

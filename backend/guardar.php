@@ -1,15 +1,25 @@
 <?php
 
 include_once '../conexion/bbdd.php';
+include_once 'file.php';
+
+$fichero = new file(
+    utf8_decode($_POST["nombre"]),
+    utf8_decode($_POST["nombreFichero"]),
+    $_POST["tamano"],
+    $_POST["extension"],
+    $_POST['id']
+);
+
 header('Content-Type: text/html; charset=ISO-8859-1');
 if (isset($_POST["nombre"]) && $_POST["nombre"] != "") {
-    $nombre = utf8_decode($_POST["nombre"]);
+    $nombre = $fichero->getName();
     $descripcion = utf8_decode($_POST["descripcion"]);
-    $tipo = utf8_decode($_POST["tipo"]);
-    $archivo = utf8_decode($_POST["nombreFichero"]);
-    $extension = explode(".",utf8_decode($_POST["nombreFichero"]));
+    $tipo = $fichero->getType();
+    $archivo = $fichero->getRename().".".$fichero->getType();
+    $extension = $fichero->getType();
     $curso = utf8_decode($_POST["curso"]);
-    $tamano = utf8_decode($_POST["tamano"]);
+    $tamano = $fichero->getSize();
     $respuesta = "";
     $consulta = "INSERT INTO material (nombre, descripcion, tipo, ruta, extension,curso,tamano)VALUES('$nombre','$descripcion','$tipo','$archivo','$extension[1]','$curso','$tamano')";
     //echo "INSERT INTO material (nombre, descripcion, tipo, ruta, extension,curso,tamano)VALUES('$nombre','$descripcion','$tipo','$archivo','$extension[1]','$curso','$tamano')";

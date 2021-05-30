@@ -46,25 +46,6 @@ function ball(num) {
     actualizarProbabilidad();
 }
 
-class Sac {
-    nbll;
-    Sac = [];
-    constructor(num) {
-        this.nbll = num;
-        for (let i = 0; i < num; i++)
-            this.Sac[i] = i + 1;
-    }
-        outBall() {
-            let rnd = Math.floor(Math.random() * this.nbll);
-            while (this.Sac[rnd] == null) {
-                rnd = Math.floor(Math.random() * this.nbll);
-            }
-            let bll = this.Sac[rnd];
-            this.Sac[rnd] = null;
-            return bll;
-        }
-    }
-
 function bola1() {
     int1 = setInterval(function () {
         bal[0].innerHTML = Math.floor(Math.random() * temas + 1);
@@ -217,7 +198,7 @@ function factorial(n) {
     return f[n];
 }
 
-const nombreTema = (number,num) =>{
+function nombreTema(number,num){
     var frmd = new FormData();
     frmd.append('num',num);
     var objXMLHttpRequest = new XMLHttpRequest();

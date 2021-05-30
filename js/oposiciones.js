@@ -12,7 +12,8 @@ $('#cam').click(function (e) {
     $('#tablaReg').load('./oposiciones/anexoIV.php', {meritos: "noBarra"});
 });
 $('#bal').click(function (e) {
-    $('#tablaReg').load('./oposiciones/bolas.php', {meritos: "noBarra"});
+    let num = Math.floor(Math.random * 1000);
+    $('#tablaReg').load('./oposiciones/bolas.php?id'+num, {meritos: "noBarra"});
 });
 $('#oposicionesAtras').click(function (e) {
     $('#tablaReg').load('./oposiciones/oposiciones.php', {meritos: "noBarra"});

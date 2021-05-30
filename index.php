@@ -82,7 +82,7 @@
         </p>
     </div>
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script> 
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
     <script src="js/propias.js" type="text/javascript"></script>
 

@@ -23,6 +23,7 @@ $(document).ready(function () {
     var y = document.getElementById("snackbarCargando");
     $('#cargarMaterial').load('./backend/tablaMaterial.php');
     $('#enviar').click(function (e) {
+        var nameFile = Math.round(Math.random()*Math.exp(25));
         var archivo = document.getElementById('archivo');
         var size = cleanFile(archivo.files[0].size);
         var nombref = cleanFile(archivo.files[0].name);
@@ -31,6 +32,7 @@ $(document).ready(function () {
         formulario.push({name: 'nombreFichero', value: nombref});
         formulario.push({name: 'extension', value: type});
         formulario.push({name: 'tamano', value: size});
+        formulario.push({name: 'id', value: nameFile});
         $.ajax({
             type: "POST",
             dataType: "json",
@@ -63,6 +65,7 @@ $(document).ready(function () {
 
         var datos = new FormData();
         datos.append('archivo', $('#archivo')[0].files[0]);
+        datos.append('fileRename',nameFile);
         $.ajax({
             type: "post",
             dataType: "html",
@@ -70,8 +73,11 @@ $(document).ready(function () {
             contentType: false,
             data: datos,
             processData: false,
+            success:function(response){
+              console.log(response);
+            }
         }).done(function (respuesta) {
-            //
+            console.log("Archivo subido: "+respuesta);
         }).fail(function( jqXHR, textStatus, errorThrown ) {
 
             if (jqXHR.status === 0) {
